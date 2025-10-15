@@ -1,0 +1,5 @@
+php index.php add income 50000 "Fizetés"
+php index.php add expense 12000 "Bevásárlás"
+php index.php list
+php index.php balance
+php index.php delete 3
