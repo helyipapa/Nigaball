@@ -40,13 +40,13 @@ class FinanceManager {
         foreach ($rows as $row) {
             $balance += ($row['type'] === 'income') ? $row['amount'] : -$row['amount'];
         }
-        echo "\n💰 Jelenlegi egyenleg: {$balance} Ft\n";
+        echo "\nJelenlegi egyenleg: {$balance} Ft\n";
     }
 
     public function deleteTransaction(int $id): void {
         $stmt = $this->pdo->prepare("DELETE FROM transactions WHERE id = ?");
         $success = $stmt->execute([$id]);
-        echo $success ? "🗑️ Tranzakció törölve!\n" : " Sikertelen törlés!\n";
+        echo $success ? "Tranzakció törölve!\n" : " Sikertelen törlés!\n";
     }
 }
 ?>
